@@ -27,7 +27,7 @@
 #define SHUNT_RESISTANCE  0.0015F           // 1.5mOhm R_shunt = V_max_shunt / I_max_shunt === SHUNT_MAX_VOLTAGE /SHUNT_MAX_CURRENT
 
 #define BATTERY_VOLTAGE 64.0F               //  Rated voltage of battery NORMAL
-#define BATTERY_AH  100.00F                 //  Rated Capacity of battery
+#define BATTERY_CAPACITY_AH  100.00F                 //  Rated Capacity of battery
 #define BATTERY_FULL_CHARGE_CYCLE 500       // Battery Full charge Cycle counter limit
 
 #define BATTERY_VOLTAGE_MAX 65.0F           //  Rated voltage of battery on FULL CHARGE
@@ -38,6 +38,9 @@
 #define BATTERY_CURRENT_LEAKAGE 0.0001F     //  0.1mA Average current drawn from battry under normal condtions , when power off
 #define BATTERY_CURRENT_IDLE 0.001F         //  1mA Average current drawn from battry under normal condtions , when power on but no motor run
 #define BATTERY_CURRENT_PEAK 60.0F          //  Average current drawn from battry under normal condtions
+
+#define BATTERY_DOD_ALLOWED_FACTOR 0.20F           //  Allowed depth of discharge(DoD) 20% === 0.20
+#define BATTERY_DOD_ALLOWED_CAPACITY_AH (BATTERY_CAPACITY_AH * BATTERY_DOD_ALLOWED_FACTOR) 
 
 //While Charging Parameters
 #define BATTERY_CURRENT_CHARGING_MIN 02.0F  //  
@@ -52,18 +55,19 @@
 #define R2_VOLTAGE_DIVIDER_BATTERY_VOLTAGE  157000      //  147k + 10k = 157k Ohm
 
 // FOR FUTURE SCOPE
-#define BUTTON_PIN_MODE
-#define BUTTON_PIN_SET 
-#define BUTTON_PIN_UP
-#define BUTTON_PIN_DOWN
-#define BUTTON_PIN_ENTER
+#define BUTTON_PIN_MODE 2
+#define BUTTON_PIN_SET 2
+#define BUTTON_PIN_UP 2
+#define BUTTON_PIN_DOWN 2
+#define BUTTON_PIN_ENTER 2
 
-#define LED_PIN_PWM_RED
-#define LED_PIN_PWM_GREEN
-#define LED_PIN_PWM_YELLOW
+#define LED_PIN_PWM_RED 2
+#define LED_PIN_PWM_GREEN 2
+#define LED_PIN_PWM_YELLOW 2
 
-#define BUTTON_PIN_SIDE_STAND
-#define BUZZER_PIN_PWM_OUT
+#define BUTTON_PIN_SIDE_STAND 2 
+#define LED_PIN_SIDE_STAND 2
+#define BUZZER_PIN_PWM_OUT 2
 
 
 #endif
