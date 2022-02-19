@@ -1,6 +1,5 @@
-#include <Arduino.h>
-
 #include <BatterySoc.h>
+
 
 Adafruit_INA219 ina219;
 Adafruit_ADS1115 ads1115;
@@ -10,7 +9,7 @@ void setup()
 
 #ifdef DEBUG_CODE
 
-  // Setup serial
+  //  Setup serial
   Serial.begin(SERIAL_BAUD_RATE);
   delay(1000);
   Serial.setDebugOutput(true);
@@ -49,4 +48,5 @@ void setup()
 
 void loop()
 {
+
 }

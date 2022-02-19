@@ -1,18 +1,20 @@
 
 #include <Arduino.h>
+#include <BatterySocData.h>     // Contains Configurable parameters
+
+#include <Wire.h>   //  I2C communication SDA,SCL
+#include <Ticker.h> //  Tickers which can call repeating functions. Replaces delay() with non-blocking functions
+
+#include <Adafruit_ADS1X15.h>   //  ADS1115 16-bit ADC
+#include <Adafruit_INA219.h>    //  INA218  12-bit current sensing IC using shunt
+
+// #include <ArduinoJson.h>     //  Easy handling of JSON data in C/C++
 
 
 #ifndef BatterySoc_h
 #define BatterySoc_h
 
-#include <BatterySocData.h>
 
-#include <Wire.h>
-
-#include <Adafruit_ADS1X15.h>
-#include <Adafruit_INA219.h>
-
-// #include <ArduinoJson.h>
 
 /*Setup LCD display*/
 void setup_lcd_i2c();
@@ -37,7 +39,7 @@ void setup();
 
 
 /*Infinite loop*/
-void loop()
+void loop();
 
 
 
